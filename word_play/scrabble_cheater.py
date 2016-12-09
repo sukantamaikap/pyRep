@@ -53,7 +53,7 @@ for word in scrabble.wordList:
         temporary = word
 print("longest palindrome word found last : " + temporary)
 
-# shorter way
+# shorter way 
 temporary = ""
 for word in scrabble.wordList:
     if word == word[::-1] and len(word) > len(temporary):
