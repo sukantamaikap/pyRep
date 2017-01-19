@@ -8,6 +8,9 @@ for word in scrabble.wordList:
     if 'uu' in word:
         print word
 
+# list comprehension
+words_uu =[word for word in scrabble.wordList if 'uu' in word]
+print(words_uu)
 print "*****************************************"
 
 print "what are all the letters that never appeared doubled"
@@ -20,6 +23,7 @@ for letter in string.ascii_lowercase:
 
     if not found:
         print letter * 2 + " never appears twice in any english word"
+
 print "*****************************************"
 
 # all words containing all vowels i.e a, e, i, o, u
@@ -60,3 +64,9 @@ for word in scrabble.wordList:
         temporary = word
 
 print("longest palindrome word found last : " + temporary)
+
+print(" Find palindrome from the dictionary")
+
+#List comprehension :
+palindromes = [word for word in scrabble.wordList if word == word[::-1]]
+print(palindromes)
